@@ -1,4 +1,7 @@
 import Head from 'next/head';
+import Hero from '../components/Hero';
+import Slider from '../components/Slider';
+import {SliderData} from '../components/SliderData';
 
 export default function Home() {
   return (
@@ -8,7 +11,11 @@ export default function Home() {
         <link rel="icon" href="/photo.png" />
         <meta name="description" content="Capture your moments" />
       </Head>
-      <h1 className="text-red-600">Hello World</h1>
+      <Hero
+        heading="Capture Photography"
+        message="I capture moment in nature and keep them alive."
+      />
+      <Slider slides={SliderData} />
     </div>
   );
 }
